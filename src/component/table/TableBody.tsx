@@ -21,7 +21,7 @@ const TableBodyComponent = () => {
 
                 if (headerValue === "created_dt") {
                   return (
-                    <TableCell key={header.value}>
+                    <TableCell key={header.value} className="whitespace-nowrap">
                       {cleanDate((row as never)[headerValue])}
                     </TableCell>
                   );
@@ -29,7 +29,7 @@ const TableBodyComponent = () => {
 
                 if (headerValue === "data_source_modified_dt") {
                   return (
-                    <TableCell key={header.value}>
+                    <TableCell key={header.value} className="whitespace-nowrap">
                       {cleanDate((row as never)[headerValue])}
                     </TableCell>
                   );

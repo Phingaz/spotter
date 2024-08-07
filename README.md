@@ -1,30 +1,91 @@
-# React + TypeScript + Vite
+# Data Table App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Data Table App is a web application designed to render and manage large datasets efficiently. With the capability to handle 100,000 rows, the app provides robust features including pagination, sorting, filtering, and searching. The user interface is built with modern web technologies to ensure a smooth and responsive experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Pagination**: Seamless navigation through large datasets with efficient pagination.
+- **Sorting**: Easily sort data by various columns.
+- **Filtering**: Apply filters to view specific subsets of data.
+- **Searching**: Perform searches to quickly find specific records.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Fast and modern build tool for web projects.
+- **Material UI**: React components for faster and easier web development.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Installation
+
+To run the app locally, follow these steps:
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/Phingaz/spotter
+   cd spotter
+   ```
+
+2. **Install Dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the App**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## Project Structure
+
+```plaintext
+data-table-app/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── table
+│   │   └── ...
+│   ├── context/
+│   │   ├── Table.tsx
+│   │   └── ...
+│   ├── hooks/
+│   │   ├── useSort.ts
+│   ├── constants/
+│   │   └── data.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── ...
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+### Searching
+
+To search through the data:
+
+1. Enter your search query in the search input field.
+2. Click the "Search" button.
+
+### Filtering
+
+To filter the data:
+
+1. Select the desired filter options from the dropdown menus.
+2. Click the "Apply Filters" button.
+
+### Sorting
+
+To sort the data:
+
+1. Click on the column headers to sort the data in ascending or descending order.
